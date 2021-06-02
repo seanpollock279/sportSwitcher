@@ -1,8 +1,10 @@
 import React from 'react';
 
 import Icon from '../Icon/Icon';
+
 import bike from '../../Assets/bicycle1.png';
 import run from '../../Assets/exercise.png';
+import bikeIcon from '../../Assets/bike.svg';
 
 import '../Screen/Screen.scss';
 
@@ -26,6 +28,9 @@ class Screen extends React.Component {
                     <button onClick={() => this.toggleBike()} className="screen__button">Ride</button>
                     <button onClick={() => this.toggleRun()} className="screen__button">Run</button>
                 </div>
+                <button className="screen__icon-container">
+                    <img className="screen__icon screen__icon-fill" src={bikeIcon} />
+                </button>
             </div>
         )
     }
