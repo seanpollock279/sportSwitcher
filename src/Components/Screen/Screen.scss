@@ -1,0 +1,50 @@
+@import '../../Styles/global.scss';
+
+.screen {
+    background-color: $light;
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    margin-top: 20%;
+    border-radius: 20px;
+    border: 1px solid $medium;
+
+    &__icon {
+        margin: 20% auto;
+        width: 50%;
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-weight: 300;
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__btnContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    &__button {
+        font-family: 'Inter';
+        background-color: $medium;
+        border-radius: 10px;
+        border: 1px solid $medium;
+        padding: 5px 8px;
+        margin: 2%;
+        width: 100px;
+        height: 35px;
+    }
+
+    @include tablet {
+        margin: 20% auto;
+    }
+}
+
+
+
+
+
