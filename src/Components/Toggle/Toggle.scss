@@ -1,70 +1,157 @@
-$toggle-background-color-on: dodgerblue;
-$toggle-background-color-off: darkgray;
-$toggle-control-color: white;
-$toggle-width: 100px;
-$toggle-height: 50px;
-$toggle-gutter: 5px;
-$toggle-radius: 50%;
-$toggle-control-speed: .15s;
-$toggle-control-ease: ease-in;
+@import '../../Styles/global.scss';
 
-$toggle-radius: $toggle-height / 2;
-$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
-
-.toggle-control {
-    display: block;
-    position: relative;
-    padding-left: $toggle-width;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    user-select: none;
-  
-    input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-  
-    input:checked ~ .control {
-      background-color: $toggle-background-color-on;
+body {
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+   
+   height:100vh;
+   
+   background-color: $medium;
+   span.switcher {
+      position: relative;
       
-      &:after {
-        left: $toggle-width - $toggle-control-size - $toggle-gutter;
+      width:200px;
+      height:50px;
+      border-radius:25px;
+      margin:20px 0;
+      input {
+         appearance: none;
+         
+         position: relative;
+
+         width:200px;
+         height:50px;
+         border-radius:25px;
+
+         background-color:$dark;
+         outline:none;
+
+         font-family: 'Oswald', sans-serif;
+         &:before, &:after {
+            z-index:2;
+
+            position: absolute;
+            top:50%;
+            transform:translateY(-50%);
+
+            color:$light;
+         }
+         &:before {
+            content: 'Bike';
+            left:20px;
+         }
+         &:after {
+            content: 'Run';
+            right:20px;
+         }
       }
-    }
-  
-    .control {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: $toggle-height;
-      width: $toggle-width;
-      border-radius: $toggle-radius;
-      background-color: $toggle-background-color-off;
-      transition: background-color $toggle-control-speed $toggle-control-ease;
-  
-      &:after {
-        content: "";
-        position: absolute;
-        left: $toggle-gutter;
-        top: $toggle-gutter;
-        width: $toggle-control-size;
-        height: $toggle-control-size;
-        border-radius: $toggle-radius;
-        background: $toggle-control-color;
-        transition: left $toggle-control-speed $toggle-control-ease;
+      label {
+         z-index:1;
+         position: absolute;
+         top:10px;
+         bottom:10px;
+         
+         border-radius:20px;
       }
-    }
-  }
-  
-// body {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     min-height: 100vh;
-//     background-color: #222229;
-//     color: white;
-// }
+      &.switcher-1 {
+         input {
+            transition:.25s -.1s;
+            &:checked {
+               background-color:$light;
+               &:before {
+                  color:$light;
+                  transition: color .5s .2s;
+               }
+               &:after {
+                  color: $dark;
+                  transition: color .5s;
+               }
+               &+label {
+                  left:10px;
+                  right:100px;
+
+                  background:$dark;
+                  
+                  transition: left .5s, right .4s .2s;
+               }
+            }
+            &:not(:checked) {
+               background:$dark;
+               transition: background .5s -.1s;
+               &:before {
+                  color:$light;
+                  transition: color .5s;
+               }
+               &:after {
+                  color:$dark;
+                  transition: color .5s .2s;
+               }
+               &+label {
+                  left:100px;
+                  right:10px;
+                  
+                  background:$light;
+                  
+                  transition: left .4s .2s, right .5s, background .35s -.1s;
+               }
+            }
+         }
+      }
+      &.switcher-2 {
+         overflow:hidden;
+         input {
+               
+            transition:background-color 0s .5s;
+            &:before {
+               color:$dark;
+            }
+            &:after {
+               color:$light;
+            }
+            &:checked {
+               background-color:$light;
+               &+label {
+                  background:$light;
+                  
+                  animation: turn-on .5s ease-out;
+                  
+                  @keyframes turn-on {
+                     0% {
+                        left:100%;
+                     }
+                     100% {
+                        left:0%;
+                     }
+                  }
+               }
+            }
+            &:not(:checked) {
+               background:$dark;
+               &+label {
+                  background:$dark;
+                  
+                  animation: turn-off .5s ease-out;
+                  
+                  @keyframes turn-off {
+                     0% {
+                        right:100%;
+                     }
+                     100% {
+                        right:0%;
+                     }
+                  }
+               }
+            }
+         }
+         label {
+            top:0px;
+            
+            width:200px;
+            height:50px;
+            border-radius:25px;
+         }
+      }
+   }
+}

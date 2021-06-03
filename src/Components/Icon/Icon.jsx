@@ -4,6 +4,6 @@ import '../Icon/Icon.scss';
 
 export default function Icon({ icon }) {
     return (
-        <img className="icon" src={icon} />
+        <img className="icon fade-in-image" src={icon} />
     )
 }

@@ -1,36 +1,35 @@
 import React from 'react';
 
 import Icon from '../Icon/Icon';
+import Toggle from '../Toggle/Toggle';
 
 import bike from '../../Assets/bicycle1.png';
 import run from '../../Assets/exercise.png';
-import bikeIcon from '../../Assets/bike.svg';
+
 
 import '../Screen/Screen.scss';
 
 class Screen extends React.Component {
 
     state = {
-        icon: ''
+        toggled: false,
     }
 
     toggleBike = () => this.setState({ icon: bike });
-    toggleRun = () => this.setState({ icon: run });
+    toggle = () => this.setState({ toggled: !this.state.toggled });
 
     render(){
         return (
-            <div className="screen">
+            <div className="screen fade-in-image">
                 <div className="screen__icon">
-                    <Icon icon={this.state.icon} />
+                    {this.state.toggled ? 
+                    <Icon icon={run}/> : <Icon icon={bike}/>}
                 </div>
                 <h3 className="screen__text">Select an activity!</h3>
                 <div className="screen__btnContainer">
-                    <button onClick={() => this.toggleBike()} className="screen__button">Ride</button>
-                    <button onClick={() => this.toggleRun()} className="screen__button">Run</button>
+                    <Toggle onClick={() => this.toggle()} />
                 </div>
-                <button className="screen__icon-container">
-                    <img className="screen__icon screen__icon-fill" src={bikeIcon} />
-                </button>
+                
             </div>
         )
     }
