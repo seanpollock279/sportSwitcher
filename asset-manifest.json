@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sportSwitcher/static/css/main.cf95fcdd.chunk.css",
+    "main.js": "/sportSwitcher/static/js/main.ce80ba8e.chunk.js",
+    "main.js.map": "/sportSwitcher/static/js/main.ce80ba8e.chunk.js.map",
+    "runtime-main.js": "/sportSwitcher/static/js/runtime-main.6aecc8ff.js",
+    "runtime-main.js.map": "/sportSwitcher/static/js/runtime-main.6aecc8ff.js.map",
+    "static/js/2.1b2d8115.chunk.js": "/sportSwitcher/static/js/2.1b2d8115.chunk.js",
+    "static/js/2.1b2d8115.chunk.js.map": "/sportSwitcher/static/js/2.1b2d8115.chunk.js.map",
+    "static/js/3.71f8a8e9.chunk.js": "/sportSwitcher/static/js/3.71f8a8e9.chunk.js",
+    "static/js/3.71f8a8e9.chunk.js.map": "/sportSwitcher/static/js/3.71f8a8e9.chunk.js.map",
+    "index.html": "/sportSwitcher/index.html",
+    "static/css/main.cf95fcdd.chunk.css.map": "/sportSwitcher/static/css/main.cf95fcdd.chunk.css.map",
+    "static/js/2.1b2d8115.chunk.js.LICENSE.txt": "/sportSwitcher/static/js/2.1b2d8115.chunk.js.LICENSE.txt",
+    "static/media/Screen.scss": "/sportSwitcher/static/media/Inter-Regular.9cd7588f.ttf",
+    "static/media/bicycle1.76291c35.png": "/sportSwitcher/static/media/bicycle1.76291c35.png",
+    "static/media/exercise.664acf31.png": "/sportSwitcher/static/media/exercise.664acf31.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6aecc8ff.js",
+    "static/js/2.1b2d8115.chunk.js",
+    "static/css/main.cf95fcdd.chunk.css",
+    "static/js/main.ce80ba8e.chunk.js"
+  ]
+}
