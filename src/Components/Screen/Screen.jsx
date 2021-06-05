@@ -15,7 +15,6 @@ class Screen extends React.Component {
         toggled: false,
     }
 
-    toggleBike = () => this.setState({ icon: bike });
     toggle = () => this.setState({ toggled: !this.state.toggled });
 
     render(){
