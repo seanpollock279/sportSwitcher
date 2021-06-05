@@ -3,14 +3,22 @@
 .screen {
     background-color: white;
     width: 50vw;
-    height: 45vh;
+    height: 20vh;
     margin: 0 auto;
     margin-top: 20%;
-    border-radius: 20px;
+    border-radius: 25px;
     border: 1px solid $medium;
 
     @include tablet {
-        height: 36vh;
+        height: 44vh;
+    }
+
+    @include desktop-med {
+        height: 65vh
+    }
+
+    @include large2 {
+        height: 70vh;
     }
 
     &__icon {
@@ -23,7 +31,13 @@
         }
 
         @include desktop-med {
-            width: 50%;
+            width: 45%;
+        }
+
+        @include large {
+            margin-top: 8%;
+            margin-bottom: 8%;
+            width: 40%;
         }
     }
 
