@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sportSwitcher/static/css/main.cf95fcdd.chunk.css",
-    "main.js": "/sportSwitcher/static/js/main.ce80ba8e.chunk.js",
-    "main.js.map": "/sportSwitcher/static/js/main.ce80ba8e.chunk.js.map",
+    "main.js": "/sportSwitcher/static/js/main.8ebee187.chunk.js",
+    "main.js.map": "/sportSwitcher/static/js/main.8ebee187.chunk.js.map",
     "runtime-main.js": "/sportSwitcher/static/js/runtime-main.6aecc8ff.js",
     "runtime-main.js.map": "/sportSwitcher/static/js/runtime-main.6aecc8ff.js.map",
     "static/js/2.1b2d8115.chunk.js": "/sportSwitcher/static/js/2.1b2d8115.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.6aecc8ff.js",
     "static/js/2.1b2d8115.chunk.js",
     "static/css/main.cf95fcdd.chunk.css",
-    "static/js/main.ce80ba8e.chunk.js"
+    "static/js/main.8ebee187.chunk.js"
   ]
 }
